@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="style.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
     <title>빵집</title>
 </head>
 <body>
@@ -21,60 +23,12 @@
 
     <div style="width: 100%; height: 30px;"></div>
 
-    <section class="container">
-        <div class="slide_box">
-            <input type="radio" name="slide" id="slide1" checked>
-            <input type="radio" name="slide" id="slide2">
-            <input type="radio" name="slide" id="slide3">
-            <input type="radio" name="slide" id="slide4">
-            <input type="radio" name="slide" id="slide5">
-            <input type="radio" name="slide" id="slide6">
-            <ul class="slide_list">
-                <li class="slide_item">
-                    <div>
-                        <label for="slide6" class="left"></label>
-                        <label for="slide2" class="right"></label>
-                        <a><img src="image/banner1.png"></a>
-                    </div>
-                </li>
-                <li class="slide_item">
-                    <div>
-                        <label for="slide1" class="left"></label>
-                        <label for="slide3" class="right"></label>
-                        <a><img src="image/banner2.png"></a>
-                    </div>
-                </li>
-                <li class="slide_item">
-                    <div>
-                        <label for="slide2" class="left"></label>
-                        <label for="slide4" class="right"></label>
-                        <a><img src="image/banner3.png"></a>
-                    </div>
-                </li>
-                <li class="slide_item">
-                    <div>
-                        <label for="slide3" class="left"></label>
-                        <label for="slide5" class="right"></label>
-                        <a><img src="image/banner4.png"></a>
-                    </div>
-                </li>
-                <li class="slide_item">
-                    <div>
-                        <label for="slide4" class="left"></label>
-                        <label for="slide5" class="right"></label>
-                        <a><img src="image/banner5.png"></a>
-                    </div>
-                </li>
-                <li class="slide_item">
-                    <div>
-                        <label for="slide5" class="left"></label>
-                        <label for="slide1" class="right"></label>
-                        <a><img src="image/banner6.png"></a>
-                    </div>
-                </li>
-            </ul>
-        </div>
-    </section>
+    <div class="slider">
+        <img src="/image/banner1.png" alt="Image 1">
+        <img src="/image/banner2.png" alt="Image 2">
+        <img src="/image/banner3.png" alt="Image 3">
+        <img src="/image/banner4.png" alt="Image 4">
+    </div>
 
     <div class="post_height"></div>
 
@@ -259,4 +213,20 @@
         </div>
     </div>
 </body>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script>
+    $('.slider').slick({
+        autoplay: true,
+        autoplaySpeed: 1500,
+        dots: true,
+        infinite: true,
+        speed: 500,
+        fade: true,
+        cssEase: 'linear',
+        adaptiveHeight: true,
+        prevArrow: false, // 이전 버튼 숨기기
+        nextArrow: false // 다음 버튼 숨기기
+    });
+</script>
 </html>
